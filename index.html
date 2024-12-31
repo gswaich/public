@@ -61,8 +61,7 @@
                                         var fullData = [];
                                         pivotData.forEachMatchingRecord(filters,
                                             function(record){ fullData.push(record); });
-                                        console.log(fullData);
-                                        alert(fullData);
+                                        //console.log(fullData);
                                     }
                                 }
                             },
@@ -70,6 +69,17 @@
                     }, {})
                 ).show();
              });
+
+             document.addEventListener('DOMContentLoaded', function() {
+
+                const table = document.querySelector("tbody");
+                if (table) {
+                    table.addEventListener("click", function() {
+                    //console.log("tbody clicked!");
+                    });
+                }
+                });
+             
         </script>
         <div id="output" style="display: none;">,Date,Sub-Category,Category,Amount,Month,Year,Month-Year,Expense,Income
 0,2023-01-01,Geico,Insurance,-240.99,1,2023,2023-01-01,-240.99,0.0
